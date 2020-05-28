@@ -42,7 +42,7 @@ jobs:
         echo "build_toolchain not found "
         exit 1
         fi
-        ./build_toolchain
+        sh build_toolchain
         #
     - name: tar_toolchain-mipsel
       run: |
