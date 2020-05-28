@@ -42,22 +42,13 @@ jobs:
         echo "build_toolchain not found "
         exit 1
         fi
-        sudo ./clean_sources
-        sudo ./build_toolchain
+        ./clean_toolchain
+        ./build_toolchain
         #
     - name: tar_toolchain-mipsel
       run: |
         cd /opt/rt-n56u/toolchain-mipsel
-        sudo tar -cvf out.tar out
-        #
-        cd /opt/rt-n56u/toolchain-mipsel
-        sudo tar zcvf toolchain-3.4.x.tar.gz toolchain-3.4.x
-        #  
-    - name : Upload Padavan-toolchain-3.4.x.tar.gz
-      uses: actions/upload-artifact@master
-      with:
-        name: Padavan-toolchain-3.4.x.tar.gz
-        path: /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x.tar.gz
+        tar zcvf toolchain-3.4.x.tar.gz toolchain-3.4.x
         #
     - name : Upload Padavan-toolchain-3.4.x.tar.gz
       uses: actions/upload-artifact@master
