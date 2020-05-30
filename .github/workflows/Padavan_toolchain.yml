@@ -34,7 +34,7 @@ jobs:
       env:
         TNAME: https://github.com/896660689/rt-n56u.git
       run: |
-        git clone --depth=1 $TNAME /opt/rt-n56u
+        git clone --depth=1 --branch=ad $TNAME /opt/rt-n56u
     - name: Build Firmware
       run: |
         cd /opt/rt-n56u/toolchain-mipsel
