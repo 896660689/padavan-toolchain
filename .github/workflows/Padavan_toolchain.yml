@@ -50,17 +50,17 @@ jobs:
         cd /opt/rt-n56u/toolchain-mipsel
         tar zcvf toolchain-3.4.x.tar.gz toolchain-3.4.x
         #
-        cd /opt/rt-n56u
-        tar -cvf toolchain-mipsel.tar toolchain-mipsel
+        cd /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x
+        tar zcvf mipsel-linux-uclibc.tar.gz mipsel-linux-uclibc
         #
-    - name : Upload Padavan-toolchain-3.4.x.tar.gz
+    - name : Upload toolchain-3.4.x.tar.gz
       uses: actions/upload-artifact@master
       with:
-        name: Padavan-toolchain-3.4.x.tar.gz
+        name: toolchain-3.4.x.tar.gz
         path: /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x.tar.gz
         #
-    - name : Upload Padavan-toolchain-mipsel.tar
+    - name : Upload mipsel-linux-uclibc.tar.gz
       uses: actions/upload-artifact@master
       with:
-        name: Padavan-toolchain-mipsel.tar
-        path: /opt/rt-n56u/toolchain-mipsel.tar
+        name: mipsel-linux-uclibc.tar.gz
+        path: /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/mipsel-linux-uclibc.tar.gz
