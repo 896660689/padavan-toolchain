@@ -7,8 +7,8 @@ on:
   push:
     tags:
     - 'v*'
-  #  branches: 
-    - ad
+    branches: 
+    - ad0
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
