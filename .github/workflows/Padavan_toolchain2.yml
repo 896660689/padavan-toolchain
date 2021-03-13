@@ -3,13 +3,15 @@
 name: Padavan toolchain
 
 on: 
-#  release:
-#    types: [published]
-#  push:
-#    tags:
-#    - 'v*'
-#  branches: 
+  release:
+    types: [published]
+  push:
+    tags:
+    - 'v*'
+  #  branches: 
     - ad
+#  schedule:
+#    - cron: 0 8 * * 5
   workflow_dispatch:
   watch:
     types: [started]
